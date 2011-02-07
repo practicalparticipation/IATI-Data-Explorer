@@ -1,0 +1,87 @@
+        body {  
+                text-align: center;
+		font-family:sans-serif;
+        }
+        .page { 
+                margin-left:auto;
+                margin-right:auto;
+                width:900px;
+        }
+        .name {
+          background:lightGrey;
+          width:100%;
+          margin:0px;
+        }
+        span.name {
+          display:block;
+          font-size:14pt;
+        }
+
+        .break {
+           margin-top:10px;
+           margin-bottom:10px;
+        }
+
+        .exhibit-thumbnailView-itemContainer {
+                width:100%;
+        }
+        .lens-inner div {
+          padding:0px 5px 0px 5px;
+        }
+
+        .field-title {
+                font-weight:bold;
+        }
+        .description {
+                font-style: italic;
+        }
+        h2 {
+                font-size:12pt;
+        }
+        .iati-image { float:right; }
+
+
+        .iati-linkages, .iati-further {
+          border:10px solid white;
+          background:lightGrey;
+          font-size:80%;
+          margin-right:160px;
+        }
+        .iati-links {
+          text-align:right;
+        }
+
+        div.exhibit-thumbnailView-group h1 { display: none; }
+
+span.name {
+   display:block;
+   background-color: lightGrey;
+   font-size:large;
+}
+
+   .intro {
+	text-align:left;
+	border:1px dashed grey;
+	padding:10px;
+
+    }
+#exhibit-color-legend {
+	display:none;
+}
+
+.intro-text {
+	background-color:rgba(255,255,255,0.85);
+	margin:2px;
+	padding:2px;
+}
+
+.intro-image {
+	border:1px solid black;
+	margin:10px;
+	float:left;
+	font-weight:bold;
+}
+
+hr {
+	border:1px dashed grey;
+}
