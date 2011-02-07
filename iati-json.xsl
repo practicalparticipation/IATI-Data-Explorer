@@ -84,6 +84,7 @@ extension-element-prefixes="dyn math">
 <xsl:for-each select="/iati-activities/iati-activity">
   <xsl:text>{</xsl:text> "type": "activity",
     "id": "<xsl:value-of select="iati-identifier"/>", <xsl:variable name="id" select="iati-identifier"/>
+    "project-id": "<xsl:value-of select="substring(iati-identifier,6,6)"/>", <!--DFID Specific-->
     "uri": "<xsl:call-template name="urlPattern"> <xsl:with-param name="org" select="reporting-org/@ref"/><xsl:with-param name="id" select="iati-identifier"/>  </xsl:call-template>",
     "label": "<xsl:value-of select="title"/>",
     "type": "<xsl:value-of select="concat('type-',@hierarchy)"/>",
@@ -100,6 +101,7 @@ extension-element-prefixes="dyn math">
     "participating-org": [ <xsl:call-template name="join"> <xsl:with-param name="valueList" select="participating-org/@ref"/> </xsl:call-template> ],
     "currency" : "<xsl:value-of select="@default-currency"/>",
     "total-committments": <xsl:value-of select="sum(transaction[transaction-type/@code='C']/value)"/>,
+    "transaction-count": <xsl:value-of select="count(transaction[not(transaction-type/@code='C')])"/>,
     "policy-marker": [ <xsl:call-template name="joinPolicy"> <xsl:with-param name="valueList" select="policy-marker[@significance &gt; 0]"/> </xsl:call-template> ], 
     "sector": [ <xsl:call-template name="join"> <xsl:with-param name="valueList" select="sector/@code"/> </xsl:call-template> ], 
     "sector-amounts": [ <xsl:call-template name="join"> <xsl:with-param name="valueList" select="sector/@percentage"/> </xsl:call-template> ], 

@@ -1,9 +1,10 @@
 <?php
 
 //Simple caching function
-function c_file_get_contents($url,$age = 3600) { 
+function c_file_get_contents($url,$age = 3600,$prefix = "") { 
+   
    $cache = md5($url);
-   $filename = "cache/urls/$cache.cache";
+   $filename = $prefix."cache/urls/$cache.cache";
 
   if (file_exists($filename)) {
     $mtime = filemtime($filename);

@@ -2,13 +2,12 @@
         xmlns="http://www.w3.org/1999/xhtml"
         xmlns:ex="http://simile.mit.edu/2006/11/exhibit#">
     <head>
-        <title>IATI</title>
+        <title>IATI Data Explorer</title>
 
      <?php if($_GET['q']) { ?>
 	<link href="./iatixslt.php?q=<?php echo $_GET['q']; ?>" type="application/json" rel="exhibit/data" />
 	<script src="http://api.simile-widgets.org/exhibit/2.2.0/exhibit-api.js" type="text/javascript"></script>
  	<script src="http://api.simile-widgets.org/exhibit/2.2.0/extensions/time/time-extension.js"></script>
-	<script src="http://api.simile-widgets.org/exhibit/2.2.0/extensions/chart/chart-extension.js" type="text/javascript"></script> 
   	<script src="http://api.simile-widgets.org/exhibit/2.2.0/extensions/map/map-extension.js?gmapkey=ABQIAAAAGqZ7tXHiGjVqon77O4l7FhQKP9dOpuBHp3S4TzPBrgTbUZ6hlxT4jZNBL5hEXzfWUuEm_uydPT7vSw"></script>
 	<script src="./exhibit-helpers.js" type="text/javascript"></script>
      <?php } ?>
@@ -77,6 +76,7 @@
 	 </div>
       </div>
   	<div class="iati-links">
+ 	   <span ex:if=".transaction-count &gt; 0"><a ex:href-subcontent="transactions/?q={{.project-id}}" target="blank">View details of <span ex:content=".transaction-count"></span> transactions for this project</a> - </span>
 	      <a ex:href-content=".uri" target="blank">View details on funders website</a>
   	</div>
      </div>
@@ -222,7 +222,7 @@ Only countries with aid projects listed as of February 2011 are currently displa
 	<b>Credits and code</b>: Thanks to the <a href="http://simile-widgets.org/wiki/Exhibit/">Exhibit</a> team and contributors for producing the framework on which this tool is based. 
 Implementation is by <A href="http://www.twitter.com/timdavies">Tim Davies</a> for <A href="http://www.devinit.org/">Development Initiatives</a>. 
 Conversion of the DFID IATI XML is carried out using an <a href="iati-json.xsl">XML Style Sheet</a> (with <A href="http://www.exslt.org/">Exslt extensions</a>) and processing in PHP. 
-Graphics are provided using the <A href="http://code.google.com/apis/chart/index.html">Google Chart API</a>.
+Graphics are provided using the <A href="http://code.google.com/apis/chart/index.html">Google Chart API</a>. Sourcecode <a href="https://github.com/practicalparticipation/IATI-Data-Explorer">available on github</a>.
 	</p>
 	<p>
 	<small>Last updated <?php echo date("d M Y", getlastmod() ); ?></small>
