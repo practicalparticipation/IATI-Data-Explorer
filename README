@@ -1,0 +1,19 @@
+IATI Data Explorer
+==================
+
+By tim@practicalparticipation.co.uk
+
+See http://aidinfolabs.org/aidinfolabs/archives/4 for details.
+
+
+==== Set Up ====
+Make sure the cache directories are writable by your web server. 
+
+Requires: PHP5 with XSL. 
+
+==== License ====
+To be confirmed. Open.
+
+==== Notes ====
+No clean-up for the cache is implemented at present, so you may want to set up a cron job to clear at least the JSON cache directory regularly. 
+

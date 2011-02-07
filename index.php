@@ -17,7 +17,7 @@
  <body>
 
 <div class="page">
- <h1><a href="<?php echo $_SERVER['SCRIPT_NAME']; ?>"><abbr title="International Aid Transparency Initiative">IATI</abbr> Data Browser</a></h1>
+ <h1><a href="<?php echo $_SERVER['SCRIPT_NAME']; ?>"><abbr title="International Aid Transparency Initiative">IATI</abbr> Data Explorer</a></h1>
  <form action="." method="get">
    Explore <abbr title="Department for International Development">DFID</abbr> funding to <select name="q">
 	<?php include("functions/options.php"); ?>
